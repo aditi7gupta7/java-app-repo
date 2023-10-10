@@ -1,14 +1,4 @@
 version: 2.1
-workflows:
-  version: 2
-  build-deploy:
-    jobs:
-      - build
-      
 jobs:
   build:
-    executor:
-      name: default
-    steps:
-      - import:
-           config: common-config-repo/.circleci/config.yml
+    <<: *common-config-repo/build
