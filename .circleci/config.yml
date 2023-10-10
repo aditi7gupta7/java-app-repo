@@ -4,4 +4,10 @@ workflows:
   build-deploy:
     jobs:
       - build:
-          context: common-config-repo
+          path: /
+jobs:
+  build:
+    executor:
+      name: default
+    steps:
+      - *common-config-repo/build
