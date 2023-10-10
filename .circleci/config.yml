@@ -2,3 +2,10 @@ version: 2.1
 jobs:
   build:
     <<: *common-config-repo/build
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build:
+          context: common-config-repo
