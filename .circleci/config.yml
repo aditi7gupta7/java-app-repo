@@ -1,11 +1,11 @@
 version: 2.1
 
 orbs:
-  gradle: circleci/gradle@3.0.0
+  java-build: circleci/java-build@1.0.0
 
 jobs:
   build:
-    executor: gradle/default
+    executor: java-executor
     steps:
-      - gradle/build:
-          version: 7.2
+      - java-build/build:
+          version: 11.0.12
